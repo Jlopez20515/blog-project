@@ -4,6 +4,13 @@ const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 
+// SAMPLE SCHEMA
+// const PostSchema = mongoose.Schema({
+//   title: { type: String, required: true },
+//   post: { type: String, required: true },
+//   date: { type: Date, required: true }
+// });
+
 const PostSchema = mongoose.Schema({
   // username: {
   //   type: String,
