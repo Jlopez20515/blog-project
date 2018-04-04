@@ -22,6 +22,8 @@ const app = express();
 
 // Logging
 app.use(morgan('common'));
+// middleware for static assets
+app.use(express.static("public"));
 
 // CORS
 app.use(function (req, res, next) {
@@ -51,7 +53,7 @@ app.get('/api/protected', jwtAuth, (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  return res.send("hello world");
+  return res.sendFile(__dirname + "/views/posts.html");
 });
 
 app.use('*', (req, res) => {
