@@ -1,10 +1,8 @@
-# language: node_js
-# node_js: node
-{
-  "language": "node_js",
-  "node_js": "node",
-  # "deploy:app": "pure-ocean-10567",
-  "os": "linux",
-  "group": "stable",
-  "dist": "trusty"
-}
+language: node_js
+node_js: node
+os: linux
+group: stable
+dist: trusty
+env:
+  global:
+    secure: lNfOgXNYbxRJv5F0JKEllwEZvYftYobYUoB8F3hkwaoLZ3zstdg9lGT1wcKxZY5XiP02ckFzbTQzZEioHksufM80R3zEpZsdQ6Gur/fDtmWu+TF25y6V9nKZOFSLCM1USVr+HRM4oV5p5oM7EvQbckoUGwWc/HkkRQudDw0HsQKHTDl5FE0JdUtikbPnC/bt9DTY+J3DezVDm60q4iO6DW4qeXPsGqHbUCzxpqR4XRkZs+hzU1k9tlHulUdZmmAzzkCDdywtEN/K4HKXyS+kEIjkEHccI8BCXId3H3MXgW2sPNg6+QT9fFfevnTgMpJOyFin14c6BCvkcu/oH0YXYXTJkPRhJu0BZaEBPWS4MFSpSazl+QszYoehWOeEbTA5pBOP0spfvPdIt3kkOOCSPfU85/Ey7v1NO6MP6i1KXIrKv3eS+2zVeceAH273rEyMuAkrCCx63Puk4iMhNrFFq6FFDCso2VMX1QBUYAkCtgvjs+C3gIge1FdR6ZNp8R9XJ7MhDNLbnIFsX0clg068zDbTaNhXt4bf1lraldrDx3dgcVYmIfGqst49jLy3wBP9+a/TGz2nUSIFOOi3JA3y3cMQF3SenyxWLB/YLwQnB5LV5L2QI6tObBMX31yXnDkTpZmt03NuHPA6aLhnmbdPrduYoCmVIGWmqsb6EfO4BQY=
