@@ -1,2 +1,10 @@
-language: node_js
-node_js: node
+# language: node_js
+# node_js: node
+{
+  "language": "node_js",
+  "node_js": "node",
+  # "deploy:app": "pure-ocean-10567",
+  "os": "linux",
+  "group": "stable",
+  "dist": "trusty"
+}
