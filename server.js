@@ -5,7 +5,6 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 const passport = require('passport');
 
-
 // const actorSurnames = { james: "Stewart", robert: "De Niro" };
 // const { james: jimmy, robert: bobby } = actorSurnames;
 // console.log(jimmy); // Stewart - the variable name is jimmy, not james
@@ -103,3 +102,4 @@ if (require.main === module) {
 }
 
 module.exports = { app, runServer, closeServer };
+// testing
