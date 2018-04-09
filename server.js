@@ -55,6 +55,12 @@ app.get('/', (req, res) => {
   return res.sendFile(__dirname + "/views/posts.html");
 });
 
+app.get('/signin', (req, res) => {
+  return res.sendFile(__dirname + "/views/signin.html");
+});
+
+
+
 app.use('*', (req, res) => {
   return res.status(404).json({ message: 'Not Found' });
 });
@@ -102,4 +108,3 @@ if (require.main === module) {
 }
 
 module.exports = { app, runServer, closeServer };
-// testing
