@@ -1,5 +1,7 @@
 // write code to toggle forms
-
+function singUp(){
+  $('.signUpInForm').toggleClass('hidden');
+}
 // write code to gather values from form fields
 
 // here is where you make your http request to authenticate
@@ -74,3 +76,9 @@ function handleSignIn(data) {
 function handleRegistration() {
   // do some stuff
 }
+
+//Hangles click events
+$('.signUpLink').click( function() {
+    event.preventDefault();
+    singUp();
+  });
