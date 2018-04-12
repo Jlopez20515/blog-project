@@ -1,7 +1,4 @@
 // write code to toggle forms
-function singUp(){
-  $('.signUpInForm').toggleClass('hidden');
-}
 // write code to gather values from form fields
 
 // here is where you make your http request to authenticate
@@ -9,10 +6,6 @@ function singUp(){
 // after signing in you'll have to store the JWT inside localStorage
 
 // also write code to redirect after successful signin
-
-let userCreds = {
-  // user stuff coming from jQuery which gathers it from form, remember .val()
-}
 
 // example http request (please use fetch :) )
 function registerUser(userCreds) {
@@ -77,8 +70,46 @@ function handleRegistration() {
   // do some stuff
 }
 
-//Hangles click events
-$('.signUpLink').click( function() {
+function toggleForm() {
+  $('.signUpInForm').toggleClass('hidden');
+}
+
+function gatherSignInData() {
+  // do the same thing as the funciton below
+}
+
+function gatherSignUpData() {
+  const registeredUser = {
+    firstName:  $('#firstName').val(),
+    lastName:  $('#lastName').val(),
+    username:  $('#username').val(),
+    userPassword: $('#user-password').val()
+  }
+  registerUser(registeredUser)
+  console.log('the things from sign up: ', registeredUser);
+}
+
+function registerEventListeners() {
+  $('#sign-in').click( function(event) {
     event.preventDefault();
-    singUp();
+    gatherSignInData();
+    console.log('sign in listener is active');
   });
+  $('#sign-up').click( function(event) {
+    event.preventDefault();
+    gatherSignUpData();
+    console.log('sign in listener is active');
+  });
+  $('.signUpLink').click( function() {
+    event.preventDefault();
+    toggleForm();
+    console.log('sign up link activated');
+  });
+  $('.signInLink').click( function() {
+    event.preventDefault();
+    toggleForm();
+    console.log('sign in link activated');
+  });
+}
+
+$(registerEventListeners);

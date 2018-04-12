@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>AnalogSea</title>
+<title>Blog it</title>
 
 <!--SEO goodies-->
-<meta name="description" content="Sign up for AnalogSea.">
+<meta name="description" content="Sign up for blog it.">
 
 <!--Reset to normalize appearance of elements across browsers-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
@@ -17,7 +17,7 @@
 <body>
 
   <!-- design note: usually, you want to put as little friction as possible in the experience of signing up. Your marketers might want to know the customer's name, but if the customer doesn't fill out the form because they're sick of giving you info about themselves, that's not going to help you. Recognize that there can be a tension between getting data from a user and getting them to follow through  and submit that data as easily and quickly as possible. -->
-  <form role="form" accept-charset="UTF-8" method="post" class="signUpInForm hidden">
+  <form id="sign-up" role="form" accept-charset="UTF-8" method="post" class="signUpInForm hidden">
     <fieldset>
       <legend>Sign up</legend>
       <label for="firstName">First Name</label>
@@ -29,11 +29,13 @@
       <label for="user-password">Password</label>
       <input placeholder="password" type="password" name="user-password" id="user-password" required/>
       <button type="submit">Sign up</button>
-      <p>Already have an account? <a class="signInLink" href="">Sign in</a></p>
     </fieldset>
   </form>
 
-  <form role="form" accept-charset="UTF-8" method="post" class="signUpInForm">
+  <!-- bring anchor tag outside of form to prervent dual-click -->
+  <p>Already have an account? <a class="signInLink" href="">Sign in</a></p>
+
+  <form id="sign-in" role="form" accept-charset="UTF-8" method="post" class="signUpInForm">
     <fieldset>
       <legend>Sign in</legend>
       <label for="username">Username</label>
@@ -41,9 +43,11 @@
       <label for="user-password">Password</label>
       <input placeholder="password" type="password" name="user-password" id="user-password" required/>
       <button type="submit">Sign in</button>
-      <p>Don't have an account? <a class="signUpLink" href="">Sign up.</a></p>
     </fieldset>
   </form>
+
+  <!-- bring anchor tag outside of form to prervent dual-click -->
+  <p>Don't have an account? <a class="signUpLink" href="">Sign up.</a></p>
 
 </body>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
