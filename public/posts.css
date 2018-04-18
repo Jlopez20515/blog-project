@@ -146,13 +146,13 @@ nav > div > ul > li {
 
 /* REDDIT GOLD */
 
-.reddit-gold {
+.blog-gold {
   margin-top: 2.5em;
   text-align:center;
   border: solid rgb(219, 209, 181);
 }
 
-.reddit-gold div {
+.blog-gold div {
   font-weight: 0;
   font-size: 16px;
   padding-top: 1em;
@@ -180,7 +180,7 @@ nav > div > ul > li {
   font-weight:bold;
 }
 
-.reddit-gold-support {
+.blog-it-gold-support {
   background-color: white;
   margin-top: 1em;
   margin-bottom: 1em;
