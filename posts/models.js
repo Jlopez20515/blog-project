@@ -4,42 +4,20 @@ const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 
-// SAMPLE SCHEMA
-// const PostSchema = mongoose.Schema({
-//   title: { type: String, required: true },
-//   post: { type: String, required: true },
-//   date: { type: Date, required: true }
-// });
-
 const PostSchema = mongoose.Schema({
-  // username: {
-  //   type: String,
-  //   required: true,
-  //   unique: true
+  // user: {
+  //   stuff in it
   // },
-  // password: {
-  //   type: String,
-  //   required: true
-  // },
-  // firstName: {type: String, default: ''},
-  // lastName: {type: String, default: ''}
+  title: { type: String, required: true },
+  url: { type: String, required: true }
 });
 
-// PostSchema.methods.serialize = function() {
-//   return {
-//     username: this.username || '',
-//     firstName: this.firstName || '',
-//     lastName: this.lastName || ''
-//   };
-// };
-
-// PostSchema.methods.validatePassword = function(password) {
-//   return bcrypt.compare(password, this.password);
-// };
-
-// PostSchema.statics.hashPassword = function(password) {
-//   return bcrypt.hash(password, 10);
-// };
+PostSchema.methods.serialize = function() {
+  return {
+    title: this.title || '',
+    url: this.url || ''
+  };
+};
 
 const Post = mongoose.model('Post', PostSchema);
 
